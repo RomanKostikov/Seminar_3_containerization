@@ -1,0 +1,10 @@
+Полезные команды:
+1. sudo docker run --name test-maria -e MARIADB_ROOT_PASSWORD=test123 -d mariadb:10.10.2 - установка и запуск mariadb;
+2. sudo docker exec -it ad6b1ddd2470 bash - запуск контйнера с mariadb;
+3. sudo docker run -it -h roman-VirtualBox (название IMAGE)- команда указания hostname через переменную;
+4. mariadb -u root -p - присоединение к марии;
+5. show databases; - показать БД внутри марии;
+6. sudo docker run --name my-phpmyadmin -d --link test-maria:db -p 8081:80 phpmyadmin/phpmyadmin - установка и запуск phpmyadmin с указанием линка на mariadb(+указание порта на котором работать);
+
+H/W:
+1. docker run --name test-mysql -e MYSQL_ROOT_PASSWORD=test123 -d mysql:8.0.33
